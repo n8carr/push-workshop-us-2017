@@ -1,6 +1,6 @@
 ---
 layout: home
-title: PhoneGap Day EU 2017 Push Workshop
+title: PhoneGap Day US 2017 Push Workshop
 ---
 
 ## What You Will Build
@@ -47,7 +47,7 @@ You will not need to setup your own Google App Project or Apple Developer Certif
 
 ## Issues/Feedback
 
-- Please create an issue [here](https://github.com/macdonst/push-workshop-eu-2017/issues) if you run
+- Please create an issue [here](https://github.com/macdonst/push-workshop-us-2017/issues) if you run
 into any problems or if you have feedback.
 
 - You can contact me on Twitter:

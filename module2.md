@@ -7,13 +7,11 @@ title: Module 2&#58; Obtaining a Registration ID
 In order for your device to receive push notifications you will need to receive a registration ID from the remote push service be it Google Cloud Messaging (GCM), Firebase Cloud Messaging (FCM) or Apple Push Notification Service (APNS). We'll learn how to register for push and report that registration ID back to our application server.
 
 ## Steps
-1. Initialize the PushNotification plugin and register an event handler for a `registration` event. Open the **www/js/my-app.js** file
-and add the following function to the end of the file:
+1. Initialize the PushNotification plugin and register an event handler for a `registration` event. Open the **www/js/my-app.js** file and add the following function to the end of the file:
 
         function setupPush() {
           var push = PushNotification.init({
               "android": {
-                  "senderID": "XXXXXXXX"
               },
               "browser": {},
               "ios": {
@@ -69,7 +67,7 @@ and add the following function to the end of the file:
 
    [PhoneGap Push Plugin](https://github.com/phonegap/phonegap-plugin-push)
 
-    $ phonegap plugin add phonegap-plugin-push --variable SENDER_ID=XXXXXXXX
+    $ phonegap plugin add phonegap-plugin-push
 
    >You won't need to specifically add it for this workshop as it is already included in the **PhoneGap Developer App**. If you are creating the project from scratch and using the CLI locally then use the command above.
 

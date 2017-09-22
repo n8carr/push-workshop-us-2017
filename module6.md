@@ -11,7 +11,6 @@ This lesson will take you through the steps required in order to setup "action b
 
         var push = PushNotification.init({
             "android": {
-                "senderID": "Your GCM ID"
             },
             "browser": {},
             "ios": {

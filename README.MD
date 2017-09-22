@@ -1,5 +1,5 @@
 # Push Workshop PhoneGap App
-PhoneGap Day EU 2017 workshop - Simple mobile application built showing how to handle various push notifications.
+PhoneGap Day US 2017 workshop - Simple mobile application built showing how to handle various push notifications.
 
 ### [Workshop Guide with Step by Step Modules](http://macdonst.github.io/push-workshop-eu)
 
@@ -22,6 +22,6 @@ project repo. Simply create a PhoneGap project then replace the config.xml and w
 
         $ phonegap plugin add cordova-plugin-statusbar
 
-- phonegap-plugin-push 1.5.3 "PushPlugin"
+- phonegap-plugin-push 2.0.0 "PushPlugin"
 
         $ phonegap plugin add phonegap-plugin-push
