@@ -23,7 +23,7 @@ In this lesson we'll learn how to launch to a specific location in your applicat
                 console.log('success');
             }, function() {
                 console.log('error');
-            });     
+            });
         });
 
    > Notice that the `artist` property is added to the `additionalData` object. If you send a property that doesn't conform to `title`, `message`, `count` or `sound` it will be placed in the `additionalData` object.
@@ -31,7 +31,7 @@ In this lesson we'll learn how to launch to a specific location in your applicat
 2. While still in **www/js/my-app.js** add the following function at the bottom of the file:
 
         function showArtist(artist) {
-          document.getElementsByName("q")[0].value = artist;
+          document.getElementById('query').value = artist;
           searchSubmit(new CustomEvent("noop"));
         }
 
@@ -41,9 +41,9 @@ In this lesson we'll learn how to launch to a specific location in your applicat
 
 5. Now we'll need to modify the command we use to send a push to inform the device what url we want to show in our app.
 
-   **For Android**       
+   **For Android**
 
-    Mac Terminal:          
+    Mac Terminal:
 
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
 
@@ -51,9 +51,9 @@ In this lesson we'll learn how to launch to a specific location in your applicat
 
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
 
-   **For iOS**            
+   **For iOS**
 
-    Mac Terminal:          
+    Mac Terminal:
 
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "New Music", "body": "The Foo Fighters have released a new album" } }, "artist": "Foo Fighters" }'
 
@@ -81,7 +81,7 @@ In this lesson we'll learn how to launch to a specific location in your applicat
             console.log('notification event');
             var artist = data.additionalData.artist;
             if (artist) {
-              if (data.additionalData.foreground !== 'undefined' || data.additionalData.foreground) {
+              if (data.additionalData.foreground !== 'undefined' && data.additionalData.foreground === true) {
                 myApp.confirm('Do you want to check out some new music from ' + artist + '?', 'New Music',
                   function () {
                     showArtist(artist);
@@ -101,7 +101,7 @@ In this lesson we'll learn how to launch to a specific location in your applicat
                 console.log('success');
             }, function() {
                 console.log('error');
-            });     
+            });
         });
 
    > We are using another property that is added to the `additionalData` object called `foreground`. You don't have to explicitly send this property from your push service. The plugin itself will set `foreground` to `true` when the notification is received while the user is in your app and `false` in the app is in the background. This allows you to program different behaviors depending on how the notification was received.
