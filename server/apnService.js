@@ -3,9 +3,9 @@
 var apn = require('apn');
 
 // Replace these with your own values.
-var cert = "/path/to/cert.pem";
-var key = "/path/to/key.pem";
-var deviceID = "Device's Registration ID";
+var cert = "/cert.pem";
+var key = "/key.pem";
+var deviceID = "evjc98sda78sadfugasdpf";
 
 var service = new apn.Connection({
     cert: cert,

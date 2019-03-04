@@ -3,8 +3,8 @@
 var gcm = require('node-gcm');
 
 // Replace these with your own values.
-var apiKey = "Project API Key";
-var deviceID = "Device's Registration ID";
+var apiKey = "AIzaSyAacyaPFLKBc4HGY8WSdQdBKIys8qJar5I";
+var deviceID = "98f7asd98vasd98vyzxv";
 
 var service = new gcm.Sender(apiKey);
 var message = new gcm.Message();
